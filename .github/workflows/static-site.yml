@@ -17,8 +17,10 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           command: "site"
+      - name: Find site output
+        run: find site -type f -name "index.html" 2>/dev/null | head -5 && ls -la site/ 2>/dev/null || echo "No site dir"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site/build
+          path: site/__sapper__/export
       - uses: actions/deploy-pages@v4
