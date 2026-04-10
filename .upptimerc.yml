@@ -1,0 +1,52 @@
+owner: Devopzone-Eood
+repo: upptime
+
+sites:
+  - name: MonPG Landing
+    url: https://monpg.app
+    icon: https://monpg.app/favicon.ico
+
+  - name: MonPG App
+    url: https://app.monpg.app
+    icon: https://monpg.app/favicon.ico
+
+  - name: MonPG API
+    url: https://api.monpg.app/api/v1/health
+    icon: https://monpg.app/favicon.ico
+
+  - name: MonPG Auth
+    url: https://auth.monpg.app/realms/monpg/.well-known/openid-configuration
+    icon: https://monpg.app/favicon.ico
+
+status-website:
+  cname: status.monpg.app
+  name: MonPG Status
+  theme: dark
+  logoUrl: https://monpg.app/og-image.png
+  introTitle: "MonPG System Status"
+  introMessage: "Real-time status of MonPG services. Updated every 5 minutes."
+  navbar:
+    - title: Homepage
+      href: https://monpg.app
+    - title: App
+      href: https://app.monpg.app
+
+workflowSchedule:
+  graphs: "0 0 * * *"
+  responseTime: "0 23 * * *"
+  staticSite: "0 1 * * *"
+  summary: "0 0 * * *"
+  updateTemplate: "0 0 * * *"
+  updates: "*/5 * * * *"
+
+i18n:
+  activeIncidents: Active incidents
+  allSystemsOperational: All systems operational
+  incidentReport: Incident report
+  noIncidents: No incidents reported.
+  activeMaintenances: Active maintenances
+  scheduledMaintenances: Scheduled maintenances
+  noMaintenances: No maintenances scheduled.
+
+user:
+  mail: status@monpg.app
