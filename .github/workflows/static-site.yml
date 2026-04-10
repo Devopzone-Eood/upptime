@@ -17,10 +17,19 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           command: "site"
-      - name: Find site output
-        run: find site -type f -name "index.html" 2>/dev/null | head -5 && ls -la site/ 2>/dev/null || echo "No site dir"
+      - name: Export static site
+        run: |
+          cd site
+          npm run export 2>&1 || npx sapper export --legacy 2>&1 || true
+          ls -la __sapper__/export/ 2>/dev/null || echo "Trying alternate export..."
+          # If sapper export exists, use it; otherwise use the site dir itself
+          if [ -d "__sapper__/export" ]; then
+            echo "SITE_PATH=site/__sapper__/export" >> $GITHUB_ENV
+          else
+            echo "SITE_PATH=site" >> $GITHUB_ENV
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site/__sapper__/export
+          path: ${{ env.SITE_PATH }}
       - uses: actions/deploy-pages@v4
