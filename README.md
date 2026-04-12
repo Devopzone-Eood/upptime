@@ -14,12 +14,12 @@ Learn more at **[monpg.app](https://monpg.app)**.
 
 ## Monitored Services
 
-| Service | URL | Description |
-|---------|-----|-------------|
-| MonPG Landing | [monpg.app](https://monpg.app) | Marketing website and documentation |
-| MonPG App | [app.monpg.app](https://app.monpg.app) | Main monitoring application |
-| MonPG API | [api.monpg.app](https://api.monpg.app/api/v1/health) | Backend API health endpoint |
-| MonPG Auth | [auth.monpg.app](https://auth.monpg.app) | Authentication service |
+| Service       | URL                                                  | Description                         |
+| ------------- | ---------------------------------------------------- | ----------------------------------- |
+| MonPG Landing | [monpg.app](https://monpg.app)                       | Marketing website and documentation |
+| MonPG App     | [app.monpg.app](https://app.monpg.app)               | Main monitoring application         |
+| MonPG API     | [api.monpg.app](https://api.monpg.app/api/v1/health) | Backend API health endpoint         |
+| MonPG Auth    | [auth.monpg.app](https://auth.monpg.app)             | Authentication service              |
 
 ## How It Works
 
